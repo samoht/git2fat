@@ -1,0 +1,16 @@
+OASISFormat: 0.4
+Name:        git
+Version:     0.9.0
+Synopsis:    Convert a Git snapshot into a FAT image
+Authors:     Thomas Gazagnaire
+License:     ISC
+Plugins:     META (0.3), DevFiles (0.3)
+BuildTools:  ocamlbuild
+
+Executable git2fat
+  Path:               lib/
+  MainIs:             git2fat.ml
+  CompiledObject:     best
+  Install:            true
+  BuildDepends:       cmdliner, git.unix, fat-filesystem,
+                      io-page-unix, mirage-block-unix
