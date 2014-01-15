@@ -2,6 +2,13 @@
 
 Convert a Git snapshot into a FAT image
 
+### Build
+
+```
+$ opam install cmdliner git fat-filesystem
+$ make
+```
+
 ### Usage
 
 ```
