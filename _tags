@@ -1,0 +1,27 @@
+# OASIS_START
+# DO NOT EDIT (digest: 3fa169a8a3d98db6dae683f64e4ed307)
+# Ignore VCS directories, you can use the same kind of rule outside
+# OASIS_START/STOP if you want to exclude directories that contains
+# useless stuff for the build process
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
+# Executable git2fat
+<lib/git2fat.{native,byte}>: pkg_cmdliner
+<lib/git2fat.{native,byte}>: pkg_git.unix
+<lib/git2fat.{native,byte}>: pkg_fat-filesystem
+<lib/git2fat.{native,byte}>: pkg_io-page-unix
+<lib/git2fat.{native,byte}>: pkg_mirage-block-unix
+<lib/*.ml{,i}>: pkg_cmdliner
+<lib/*.ml{,i}>: pkg_git.unix
+<lib/*.ml{,i}>: pkg_fat-filesystem
+<lib/*.ml{,i}>: pkg_io-page-unix
+<lib/*.ml{,i}>: pkg_mirage-block-unix
+# OASIS_STOP
